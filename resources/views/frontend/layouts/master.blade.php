@@ -10,10 +10,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Consulting Finance Corporate Business - Consulting HTML Template">
-    <meta name="keywords"
-        content="consulting, accountant, advisor, audit, beaver builder, broker, business, clean, company, consulting, corporate, finance, financial, insurance, trader">
-    <meta name="author" content="Themexriver">
+    <meta name="description" content="{{$setting->meta_description}}">
+    <meta name="keywords"content="{{$setting->meta_tag}}">
+    <meta name="author" content="{{$setting->meta_title}}">
     <title>{{$setting->website_title}} - Home </title>
     <!-- Stylesheets -->
     <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">

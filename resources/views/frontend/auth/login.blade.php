@@ -32,14 +32,14 @@
                             <form method="post" action="{{route('customer.login.action')}}" id="contact-form">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="email" name="email" value="{{old('email')}}" placeholder="Email" class="form-control @error('email') is-invalid @enderror">
+                                    <input type="email" name="email" value="{{old('email')}}" placeholder="Email" class="form-control @error('email') is-invalid @enderror" required>
                                     @if ($errors->has('email'))
                                     <span class="text-danger"><i>{{ $errors->first('email') }}</i></span>
                                     @endif
                                 </div>
                                 
                                 <div class="form-group">
-                                    <input type="password" name="password" value="" placeholder="Password" class="form-control @error('password') is-invalid @enderror">
+                                    <input type="password" name="password" value="" placeholder="Password" class="form-control @error('password') is-invalid @enderror" required>
                                         @if ($errors->has('password'))
                                         <span class="text-danger"><i>{{ $errors->first('password') }}</i></span>
                                         @endif

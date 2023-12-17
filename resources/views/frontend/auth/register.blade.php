@@ -13,19 +13,15 @@
   <!--End Slide Info Boxed-->
   
   <section class="contact-page-section" style="margin-bottom:10px">
-    
     <div class="auto-container pb-10">
         <div class="inner-container">
             <h2>
                  <br>  <span>Create New Account</span>
                 </h2>
             <div class="row clearfix">
-              
-                
                 <!-- Form Column -->
                 <div class="form-column col-lg-12 col-md-12 col-sm-12 mx-auto">
-                    <div class="inner-column">
-                        
+                    <div class="inner-column">       
                         <!--Contact Form-->
                         <div class="contact-form">
                             <form method="post" action="{{route('customer.register.post')}}" id="contact-form">
@@ -33,7 +29,7 @@
                                <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                    <input type="text" name="name" value="{{old('name')}}" placeholder="First Name"  class="form-control @error('name') is-invalid @enderror">
+                                    <input type="text" name="name" value="{{old('name')}}" placeholder="First Name"  class="form-control @error('name') is-invalid @enderror" required>
                                     @if ($errors->has('name'))
                                     <span class="text-danger"><i>{{ $errors->first('name') }}</i></span>
                                     @endif
@@ -42,7 +38,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="lname" value="{{old('lname')}}" placeholder="Last Name" class="form-control @error('lname') is-invalid @enderror">
+                                        <input type="text" name="lname" value="{{old('lname')}}" placeholder="Last Name" class="form-control @error('lname') is-invalid @enderror" required>
                                         @if ($errors->has('lname'))
                                         <span class="text-danger"><i>{{ $errors->first('lname') }}</i></span>
                                         @endif
@@ -50,7 +46,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="mname" value="{{old('mname')}}" placeholder="Middle Name" class="form-control @error('mname') is-invalid @enderror">
+                                        <input type="text" name="mname" value="{{old('mname')}}" placeholder="Middle Name" class="form-control @error('mname') is-invalid @enderror" required>
                                         @if ($errors->has('mname'))
                                         <span class="text-danger"><i>{{ $errors->first('mname') }}</i></span>
                                         @endif
@@ -60,7 +56,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="username" value="{{old('username')}}" placeholder="Username" class="form-control @error('username') is-invalid @enderror">
+                                        <input type="text" name="username" value="{{old('username')}}" placeholder="Username" class="form-control @error('username') is-invalid @enderror" required>
                                         @if ($errors->has('username'))
                                         <span class="text-danger"><i>{{ $errors->first('username') }}</i></span>
                                         @endif
@@ -68,7 +64,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="email" name="email" value="{{old('email')}}" placeholder="Email" class="form-control @error('email') is-invalid @enderror">
+                                        <input type="email" name="email" value="{{old('email')}}" placeholder="Email" class="form-control @error('email') is-invalid @enderror" required>
                                         @if ($errors->has('email'))
                                         <span class="text-danger"><i>{{ $errors->first('email') }}</i></span>
                                         @endif
@@ -78,7 +74,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" name="mobile" value="{{old('mobile')}}" placeholder="Mobile Number" class="form-control @error('mobile') is-invalid @enderror">
+                                        <input type="text" name="mobile" value="{{old('mobile')}}" placeholder="Mobile Number" class="form-control @error('mobile') is-invalid @enderror" required>
                                         @if ($errors->has('mobile'))
                                         <span class="text-danger"><i>{{ $errors->first('mobile') }}</i></span>
                                         @endif
@@ -86,7 +82,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="password" name="password" value="" placeholder="Password" class="form-control @error('password') is-invalid @enderror">
+                                        <input type="password" name="password" value="" placeholder="Password" class="form-control @error('password') is-invalid @enderror" required>
                                         @if ($errors->has('password'))
                                         <span class="text-danger"><i>{{ $errors->first('password') }}</i></span>
                                         @endif
@@ -96,7 +92,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="password" name="password_confirmation" value="" placeholder="Confirm Password" >
+                                        <input type="password" name="password_confirmation" value="" placeholder="Confirm Password" required>
                                     </div>
                                 </div>
                                </div>
@@ -111,7 +107,6 @@
                         
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
