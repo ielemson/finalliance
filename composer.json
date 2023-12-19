@@ -24,6 +24,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
         "laravelcollective/html": "^6.2",
+        "monarobase/country-list": "^3.4",
         "spatie/laravel-menu": "^3.7",
         "spatie/laravel-permission": "^3.17",
         "yajra/laravel-datatables": "1.5",

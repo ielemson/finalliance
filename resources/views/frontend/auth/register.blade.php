@@ -73,11 +73,30 @@
                                    
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="mobile" value="{{old('mobile')}}" placeholder="Mobile Number" class="form-control @error('mobile') is-invalid @enderror" required>
-                                        @if ($errors->has('mobile'))
-                                        <span class="text-danger"><i>{{ $errors->first('mobile') }}</i></span>
-                                        @endif
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <select  name="country" value="{{old('country')}}"  class="custom-select-box @error('country') is-invalid @enderror" required>
+                                                 <option value="">Select Country</option>
+                                                    @foreach ($countries as $country)
+                                                    <option value="{{$country->id}}">{{$country->name}} +{{$country->code}}</option>
+                                                @endforeach
+                                                </select>
+                                                @if ($errors->has('country'))
+                                                <span class="text-danger"><i>{{ $errors->first('country') }}</i></span>
+                                                @endif
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="tel"  name="mobile" value="{{old('mobile')}}" placeholder="Mobile Number" class="form-control @error('mobile') is-invalid @enderror"  pattern="^[0-9]+$" required>
+                                                @if ($errors->has('mobile'))
+                                                <span class="text-danger"><i>{{ $errors->first('mobile') }}</i></span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                     
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -98,11 +117,15 @@
                                </div>
                                 
                                 <div class="form-group">
-                                    <button type="submit" class="theme-btn">Register Account</button>
-                                    <a href="{{route('customer.login')}}" class="theme-btn">Login</a>
-                                </div>                                        
-                                
+                                    <button type="submit" class="theme-btn btn-style-one">Register Account</button>
+                                    <a href="{{route('customer.login')}}" class="theme-btn btn-style-one">Login</a>
+                                </div>
+                                                                        
+                                                                         {{-- <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                                                                            <button type="submit" class="theme-btn btn-style-one">Submit request <span class="icon flaticon-share-option"></span></button>
+                                                                        </div> --}}
                             </form>
+
                         </div>
                         
                     </div>

@@ -189,6 +189,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Alexusmai\LaravelFileManager\FileManagerServiceProvider::class,
         Brian2694\Toastr\ToastrServiceProvider::class,
+        Monarobase\CountryList\CountryListServiceProvider::class,
 
 
     ],
@@ -247,6 +248,7 @@ return [
         'DataTables' => Yajra\DataTables\Facades\DataTables::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Toastr'  => Brian2694\Toastr\Facades\Toastr::class,
+        'Countries' => Monarobase\CountryList\CountryListFacade::class,
 
 
     ],

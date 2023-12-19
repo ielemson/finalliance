@@ -5,11 +5,16 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Country;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Brian2694\Toastr\Facades\Toastr;
+use Monarobase\CountryList\CountryList;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
+// use App\Mail\WelcomeEmail;
+use App\Mail\UserWelcome;
+use Illuminate\Support\Facades\Mail;
 class UserRegistration extends Controller
 {
     /**
@@ -29,7 +34,9 @@ class UserRegistration extends Controller
      */
     public function create()
     {
-        return view('frontend.auth.register');
+       $countries = Country::all();
+        // return view('frontend.auth.register');
+        return view('frontend.auth.register',compact('countries'));
     }
 
     /**
@@ -40,11 +47,14 @@ class UserRegistration extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
+
         $request->validate([
             'name' => 'required',
             'lname' => 'required',
             'mname' => 'required',
             'username' => 'required',
+            'country' => 'required',
             'email' => 'required|email|unique:users',
             'mobile' => 'required|numeric|unique:users',
             'password' => 'required|confirmed',
@@ -55,10 +65,11 @@ class UserRegistration extends Controller
             'lname.required' => 'Last name is required',
             'mname.required' => 'Middle name is required',
             'username.required' => 'User name is required',
+            'country.required' => 'Country is required',
             'email.required' => 'Email is required',
             'email.email' => 'Invalid email',
             'mobile.required' => 'Mobile number is required',
-            'mobile.numeric' => 'Invalid mobile number',
+            // 'mobile.numeric' => 'Invalid mobile number',
             'password.required' => 'Password is required',
             'password.confirmed' => 'Password Mismatch',
         ]
@@ -71,6 +82,7 @@ class UserRegistration extends Controller
     $user->assignRole('User');
     // Toastr::success('Registration Successful');
     Toastr::success('Registration Successful', 'Info', ["positionClass" => "toast-bottom-right"]);
+    Mail::to($user->email)->send(new UserWelcome());
       return redirect()->route('customer.login');
     }
 

@@ -145,7 +145,9 @@ h6{
 	font-size:18px;
 }
 
-
+input,button,select,textarea{
+	
+}
 
 textarea{
 	overflow:hidden;
@@ -1521,7 +1523,6 @@ img{
 }
 
 .main-header .header-lower .search-panel input[type="text"],
-.main-header .header-lower .search-panel input[type="tel"],
 .main-header .header-lower .search-panel input[type="search"],
 .main-header .header-lower .search-panel input[type="password"],
 .main-header .header-lower .search-panel select{
@@ -1628,7 +1629,6 @@ img{
 }
 
 .header-style-five .header-upper .search-panel input[type="text"],
-.header-style-five .header-upper .search-panel input[type="tel"],
 .header-style-five .header-upper .search-panel input[type="search"],
 .header-style-five .header-upper .search-panel input[type="password"],
 .header-style-five .header-upper .search-panel select{
@@ -10744,7 +10744,6 @@ img{
 }
 
 .sidebar .search-box .form-group input[type="text"],
-.sidebar .search-box .form-group input[type="tel"],
 .sidebar .search-box .form-group input[type="search"]{
 	position:relative;
 	line-height:28px;
@@ -11816,7 +11815,6 @@ img{
 }
 
 .contact-form input[type="text"],
-.contact-form input[type="tel"],
 .contact-form input[type="email"],
 .contact-form input[type="password"],
 .contact-form select,
@@ -11859,7 +11857,6 @@ img{
 }
 
 .contact-form input[type="text"]:focus,
-.contact-form input[type="tel"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form input[type="password"]:focus,
 .contact-form select:focus,

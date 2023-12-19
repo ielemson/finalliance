@@ -46,8 +46,8 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <button type="submit" class="theme-btn">Login</button>
-                                    <a href="{{route('customer.register')}}"  class="theme-btn btn-style-twelve">Register</a>
+                                    <button type="submit" class="theme-btn btn-style-one">Login</button>
+                                    <a href="{{route('customer.register')}}"  class="theme-btn btn-style-one">Register</a>
                                 </div>                                        
                                 
                             </form>
