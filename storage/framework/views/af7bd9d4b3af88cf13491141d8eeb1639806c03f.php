@@ -18,7 +18,7 @@
     <link href="<?php echo e(asset('css/bootstrap.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/style.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/responsive.css')); ?>" rel="stylesheet">
-    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="<?php echo e(asset('css/toastr.min.css')); ?>">
     
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
@@ -44,10 +44,10 @@
     <script src="<?php echo e(asset('js/wow.js')); ?>"></script>
     
     <script src="<?php echo e(asset('js/main.js')); ?>"></script>
-    <script src="<?php echo e(asset('assets/admin/js/toastr.min.js')); ?>"></script>
-    <script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="<?php echo e(asset('js/toastr.min.js')); ?>"></script>
     
+    <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+   
     
     <?php echo Toastr::message(); ?>
 
@@ -58,8 +58,6 @@
             });
         }, 5000);
     </script>
-
-
 
 </body>
 
